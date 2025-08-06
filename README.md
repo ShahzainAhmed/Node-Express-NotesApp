@@ -1,5 +1,7 @@
 ## Setting Up Node.js, NPM, and Express to Create a Server
 
+Course Followed: `https://www.youtube.com/watch?v=yFpcw3ABrQU&list=PLr7P7lMIUTuuDxy3IuoPLjoG9IvL1LNNA&index=1`
+
 NodeJS comes with NPM (Node Package Manager).
 NPM is used to install third-party packages like Express, MongoDB, etc.
 
