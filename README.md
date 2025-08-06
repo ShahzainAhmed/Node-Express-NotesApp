@@ -151,3 +151,12 @@ We created a 'dev' script
 
 To run this script, we’ll use `npm run dev`, where `dev` is the name of the script.
 
+### Creating a Note Model:
+A model is a data structure that we will save in our MongoDB database. We don’t need any extra packages for this, as Mongoose already provides all the necessary functionality.
+
+### Schema
+A Schema defines the structure of a model — it outlines what fields and data types your model will have.
+
+For example, in a Notes app, a Schema might include the following fields:
+
+Note: `id`, `userId`, `title`, `content`, `dateAdded`
