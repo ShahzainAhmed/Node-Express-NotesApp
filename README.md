@@ -2,6 +2,8 @@
 
 Course Followed: `https://www.youtube.com/watch?v=yFpcw3ABrQU&list=PLr7P7lMIUTuuDxy3IuoPLjoG9IvL1LNNA&index=1`
 
+## Episode 1 - Setting up and creating the Server
+
 NodeJS comes with NPM (Node Package Manager).
 NPM is used to install third-party packages like Express, MongoDB, etc.
 
@@ -57,7 +59,7 @@ app.listen(5001, function () {
 });
 
 ```
-
+## Episode 2 - Connecting to MongoDB using Mangoose and using Postman
 ## Initializing MongoDB with Mongoose
 
 Create MongoDB database and Cluster by going to its website, and create the user in Database Access, and create 0.0.0.0/0 IP in Network Access to access the IP from anywhere. 
@@ -104,3 +106,5 @@ app.listen(5001, function () {
 });
 
 ```
+
+
