@@ -118,3 +118,13 @@ app.get('/home', function(req, res) {
 If I change it to "This is home" and remove the word "page", then I have to stop the server (started using `node server.js`) and restart it again to see the change, right?
 
 If that's the case, it would take forever to build APIs this way.
+
+To fix this issue, we will install a package from npm called `nodemon`.
+
+nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+Open your terminal and run the following command to install the nodemon package:
+```
+npm install -g nodemon
+```
+> The -g flag stands for global. It means that the package will be installed system-wide, not just in the current project.
