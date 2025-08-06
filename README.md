@@ -128,3 +128,12 @@ Open your terminal and run the following command to install the nodemon package:
 npm install -g nodemon
 ```
 > The -g flag stands for global. It means that the package will be installed system-wide, not just in the current project.
+
+## Starting the Server with Nodemon
+
+Now that we’ve installed `nodemon`, we won’t start our server using `node server.js` Instead, we’ll use:
+```
+nodemon server.js
+```
+> This will automatically restart the server whenever you make changes to your code.
+
