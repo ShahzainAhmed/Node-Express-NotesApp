@@ -160,11 +160,10 @@ A Schema defines the structure of a model — it outlines what fields and data t
 For example, in a Notes app, a Schema might include the following fields: `id`, `userId`, `title`, `content`, `dateAdded`
 
 ### Steps to Create and Export a Model
-```
-// Steps to create a model:
-// 1. Define Schema -> Note: id, userId, title, content, dateAdded
-// 2. Create Model -> 2 things to give: <model name> <schema> model name can be Note, and schema comes from Step 1
 
+1. Define Schema: Note: id, userId, title, content, dateAdded
+2. Create Model: 2 things to give: <model name> <schema> model name can be Note, and schema comes from Step 1
+```
 // Initialize mongoose
 const mongoose = require("mongoose");
 
