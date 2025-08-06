@@ -58,14 +58,14 @@ app.listen(5001, function () {
 
 ## Initializing MongoDB with Mongoose
 
-First in your terminal write this command to install mongoose
+Create MongoDB database and Cluster by going to its website, and create the user in Database Access, and create 0.0.0.0/0 IP in Network Access to access the IP from anywhere. 
+
+First, in your terminal write this command to install the mongoose package
 ```
 npm install mongoose
 ```
-Then to connect MongoDB database with mongoose, check the code below
+Then, to connect MongoDB database with mongoose, check the code below
 ```
-// You can create your Express Server using these 3 Steps
-
 // Step 1 - Initialization
 const express = require('express'); // instance of express object
 const app = express(); // server has been created inside app
@@ -75,7 +75,7 @@ const mongoose = require('mongoose'); // initialize mongoose
 
 // replace <dbpassword> with real password, and remove after / and write database name
 mongoose.connect("mongodb+srv://ShahzainAhmed:shahzain5544@cluster0.wluzlbh.mongodb.net/notesdb").then(function () {
-    // If mongoose connects, then these all routes will be available, else not.
+    // If mongoose connects, then all these routes will be available, else not.
 
     // Default Route -> localhost:5001/
     app.get('/', function (req, res) {
