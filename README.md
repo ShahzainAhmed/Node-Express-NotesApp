@@ -1,4 +1,4 @@
-## Setting up -> NodeJS, NPM, ExpressJS to Create a Server
+## Setting Up Node.js, NPM, and Express to Create a Server
 
 NodeJS comes with NPM (Node Package Manager).
 NPM is used to install third-party packages like Express, MongoDB, etc.
