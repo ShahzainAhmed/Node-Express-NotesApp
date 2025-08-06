@@ -62,6 +62,8 @@ First in your terminal write this command to install mongoose
 ```
 npm install mongoose
 ```
+Then to connect MongoDB database with mongoose, check the code below
+```
 // You can create your Express Server using these 3 Steps
 
 // Step 1 - Initialization
