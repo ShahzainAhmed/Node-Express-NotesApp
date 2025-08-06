@@ -109,4 +109,12 @@ app.listen(5001, function () {
 
 ## Episode 3 - Creating Routes and Handling Data
 
+When we make any change to a print statement or something like:
+```
+app.get('/home', function(req, res) {
+  res.send("This is the home page");
+});
+```
+If I change it to "This is home" and remove the word "page", then I have to stop the server (started using `node server.js`) and restart it again to see the change, right?
 
+If that's the case, it would take forever to build APIs this way.
