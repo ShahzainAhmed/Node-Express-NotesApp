@@ -149,3 +149,5 @@ We created a 'dev' script
   },
 ```
 
+To run this script, we’ll use `npm run dev`, where `dev` is the name of the script.
+
