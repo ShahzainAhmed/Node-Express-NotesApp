@@ -246,4 +246,16 @@ Open your terminal and run the following command to install the body-parser pack
 npm install body-parser
 ```
 
+Initialize body-parser like this
+```
+const bodyParser = require('body-parser');
+```
+
+Enable `body-parser` so that our Express app can understand incoming `POST` data:
+```
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+```
+>extended: false → Disallows nested objects in body requests.  
+>extended: true → Allows nested objects.
 
