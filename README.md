@@ -268,7 +268,7 @@ title = My Post Note
 content = This is a POST API Note
 ```
 
-After hitting this data in Postman, you will see the results like
+After sending this data through Postman, you'll see the results like this:
 
 ```
 {
