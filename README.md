@@ -259,3 +259,22 @@ app.use(bodyParser.json());
 >extended: false → Disallows nested objects in body requests.  
 >extended: true → Allows nested objects.
 
+Now that everything is set up, open Postman, select the POST method, then go to Body → x-www-form-urlencoded, and add the following 4 keys with their respective values:
+
+```
+id = 86
+userId = shahzainahmed86@gmail.com
+title = My Post Note
+content = This is a POST API Note
+```
+
+After hitting this data in Postman, you will see the results like
+
+```
+{
+    "id": "86",
+    "userId": "shahzainahmed86@gmail.com",
+    "title": "My Post Note",
+    "content": "This is a POST API Note"
+}
+```
