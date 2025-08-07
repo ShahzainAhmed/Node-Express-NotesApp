@@ -203,4 +203,9 @@ const noteSchema = mongoose.Schema({
 module.exports = mongoose.model("Note", noteSchema); 
 ```
 
+### Steps to Import a Model we created
+```
+const Note = require("./models/Note");
+```
+> ' ./ ' means current folder -> src
 
