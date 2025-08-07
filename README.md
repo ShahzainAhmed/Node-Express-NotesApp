@@ -203,9 +203,47 @@ const noteSchema = mongoose.Schema({
 module.exports = mongoose.model("Note", noteSchema); 
 ```
 
-### Steps to Import a Model we created
+### To Import a Model
 ```
 const Note = require("./models/Note");
 ```
 > ' ./ ' means current folder -> src
+
+For the GET APIs, we were using them like this:
+
+```
+    app.get('/notes/add', async function (req, res) {
+        // Object or instance
+        const newNote = new Note({
+            id: "0003",
+            userId: "shahzainahmed57@gmail.com",
+            title: "My Second Note",
+            content: "This is the content",
+        });
+
+        await newNote.save();
+
+        const response = { message: "New Note Created" };
+        res.json(response);
+
+    });
+```
+Instead of manually creating data like in the GET method, let's use the POST method to send data dynamically.
+```
+ app.post('/notes/add', async function (req, res) {
+        res.json(req.body);
+    });
+```
+### 
+POST methods don’t parse JSON or URL-encoded data by default.  
+
+To fix this issue, we will install a package from npm called body-parser.
+> The body-parser helps read and convert the data sent in `req.body`.
+
+Open your terminal and run the following command to install the body-parser package:
+
+```
+npm install body-parser
+```
+
 
