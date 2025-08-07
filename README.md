@@ -278,3 +278,20 @@ After sending this data through Postman, you'll see the results like this:
     "content": "This is a POST API Note"
 }
 ```
+
+So now whole code block would be
+
+```
+ app.post('/notes/add', async function (req, res) {
+        res.json(req.body);
+        const newNote = Note({
+            id: req.body.id,
+            userId: req.body.userId,
+            title: req.body.title,
+            content: req.body.content,
+        });
+        await newNote.save();
+        const response = { message: "New Note Created" + `id: ${req.body.id}` };
+        res.json(response);
+    });
+```
