@@ -3,13 +3,13 @@ const router = express.Router(); // to use app as router
 const Note = require("./../models/Note");
 
 // Notes Route -> localhost:5001/notes
-// Fetch all notes from the database using the Note model.
 // app.get('/notes/list', async function (req, res) {
 //     // Note.find() returns a Promise, so we use await to get the actual data.
 //     var notes = await Note.find();
 //     res.json(notes);
 // });
 
+// Fetch all notes from the database using the Note model.
 router.post('/list', async function (req, res) {
     var notes = await Note.find({ userId: req.body.userId });
     res.json(notes);
@@ -36,6 +36,7 @@ router.post('/list', async function (req, res) {
   Body parser will read/convert the req.body  
 */
 
+// Add Notes API
 router.post('/add', async function (req, res) {
     // No need to create a separate route for updating a note.
     // This will first delete the note with the same ID (if it exists), then add the new one.

@@ -20,15 +20,16 @@ const Note = require("./models/Note"); // ./ mean current folder -> src
 const router = require('./routes/Note');
 
 // replace <dbpassword> with real password, and remove after / and write database name
-mongoose.connect("mongodb+srv://ShahzainAhmed:shahzain5544@cluster0.wluzlbh.mongodb.net/notesdb").then(function () {
-    // If mongoose connects, then these all routes will be available, else not.
+
+// const mongoDbPath = "mongodb+srv://ShahzainAhmed:shahzain5544@cluster0.wluzlbh.mongodb.net/notesdb";
+const mongoDbPath = process.env.MONGO_DB_URI;
+mongoose.connect(mongoDbPath).then(function () {
+    // If MongoDB connects, then all these paths will be available to use, else not.
 
     // Default Route -> localhost:5001/
     app.get('/', function (req, res) {
         const response = { message: "API Works - Default Route" };
         res.json(response);
-        // res.send("This is the default page");
-
     });
 
     // Home Route -> localhost:5001/home
@@ -40,7 +41,7 @@ mongoose.connect("mongodb+srv://ShahzainAhmed:shahzain5544@cluster0.wluzlbh.mong
 
 
 // Step 3 - Start Server on PORT
-// app.listen(5001); function is optional here.
-app.listen(5001, function () {
-    console.log("Server Started at PORT: 5001");
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, function () {
+    console.log("Server Started at PORT: " + PORT);
 });
