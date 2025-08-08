@@ -28,7 +28,7 @@ mongoose.connect(mongoDbPath).then(function () {
 
     // Default Route -> localhost:5001/
     app.get('/', function (req, res) {
-        const response = { message: "API Works - Default Route" };
+        const response = { statuscode: res.statusCode, message: "API Works - Default Route" };
         res.json(response);
     });
 
