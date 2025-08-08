@@ -402,3 +402,9 @@ app.listen(5001, function () {
 ```
 > for GET APIs we use `req.params.id`
 > for POST APIs we use `req.body.id` 
+
+## Episode 4 - Hosting
+
+Use Replit for hosting for free
+
+Add SECRETS like MONGO_DB_URI & PORT
